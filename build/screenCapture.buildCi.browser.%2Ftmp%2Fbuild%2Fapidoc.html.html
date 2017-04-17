@@ -1,0 +1,2362 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/chjj/pty.js">pty.js (v0.3.1)</a>
+</h1>
+<h4>Pseudo terminals for node.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pty.js">module pty.js</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.js">
+            function <span class="apidocSignatureSpan">pty.</span>js
+            <span class="apidocSignatureSpan">(file, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.Terminal">
+            function <span class="apidocSignatureSpan">pty.js.</span>Terminal
+            <span class="apidocSignatureSpan">(file, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.createTerminal">
+            function <span class="apidocSignatureSpan">pty.js.</span>createTerminal
+            <span class="apidocSignatureSpan">(file, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.fork">
+            function <span class="apidocSignatureSpan">pty.js.</span>fork
+            <span class="apidocSignatureSpan">(file, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.js.createTerminal">
+            function <span class="apidocSignatureSpan">pty.js.</span>js.createTerminal
+            <span class="apidocSignatureSpan">(file, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.js.native.fork">
+            function <span class="apidocSignatureSpan">pty.js.</span>js.native.fork
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.js.native.open">
+            function <span class="apidocSignatureSpan">pty.js.</span>js.native.open
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.js.native.process">
+            function <span class="apidocSignatureSpan">pty.js.</span>js.native.process
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.js.native.resize">
+            function <span class="apidocSignatureSpan">pty.js.</span>js.native.resize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.js.open">
+            function <span class="apidocSignatureSpan">pty.js.</span>js.open
+            <span class="apidocSignatureSpan">(opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.js.pty_win">
+            function <span class="apidocSignatureSpan">pty.js.</span>js.pty_win
+            <span class="apidocSignatureSpan">(file, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.js.toString">
+            function <span class="apidocSignatureSpan">pty.js.</span>js.toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.open">
+            function <span class="apidocSignatureSpan">pty.js.</span>open
+            <span class="apidocSignatureSpan">(opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.spawn">
+            function <span class="apidocSignatureSpan">pty.js.</span>spawn
+            <span class="apidocSignatureSpan">(file, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.toString">
+            function <span class="apidocSignatureSpan">pty.js.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">pty.js.</span>total</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pty.js.</span>js.native</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pty.js.</span>js.pty_win.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pty.js.</span>native</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pty.js.createTerminal">module pty.js.createTerminal</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.createTerminal.createTerminal">
+            function <span class="apidocSignatureSpan">pty.js.</span>createTerminal
+            <span class="apidocSignatureSpan">(file, args, opt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pty.js.native">module pty.js.native</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.native.fork">
+            function <span class="apidocSignatureSpan">pty.js.native.</span>fork
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.native.open">
+            function <span class="apidocSignatureSpan">pty.js.native.</span>open
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.native.process">
+            function <span class="apidocSignatureSpan">pty.js.native.</span>process
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.native.resize">
+            function <span class="apidocSignatureSpan">pty.js.native.</span>resize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pty.js.native.fork">module pty.js.native.fork</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.native.fork.fork">
+            function <span class="apidocSignatureSpan">pty.js.native.</span>fork
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pty.js.native.open">module pty.js.native.open</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.native.open.open">
+            function <span class="apidocSignatureSpan">pty.js.native.</span>open
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pty.js.native.process">module pty.js.native.process</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.native.process.process">
+            function <span class="apidocSignatureSpan">pty.js.native.</span>process
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pty.js.native.resize">module pty.js.native.resize</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.native.resize.resize">
+            function <span class="apidocSignatureSpan">pty.js.native.</span>resize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pty.js.open">module pty.js.open</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.open.open">
+            function <span class="apidocSignatureSpan">pty.js.</span>open
+            <span class="apidocSignatureSpan">(opt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pty.js.pty_win">module pty.js.pty_win</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.pty_win.pty_win">
+            function <span class="apidocSignatureSpan">pty.js.</span>pty_win
+            <span class="apidocSignatureSpan">(file, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.pty_win.Terminal">
+            function <span class="apidocSignatureSpan">pty.js.pty_win.</span>Terminal
+            <span class="apidocSignatureSpan">(file, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.pty_win.createTerminal">
+            function <span class="apidocSignatureSpan">pty.js.pty_win.</span>createTerminal
+            <span class="apidocSignatureSpan">(file, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.pty_win.fork">
+            function <span class="apidocSignatureSpan">pty.js.pty_win.</span>fork
+            <span class="apidocSignatureSpan">(file, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.pty_win.open">
+            function <span class="apidocSignatureSpan">pty.js.pty_win.</span>open
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.pty_win.spawn">
+            function <span class="apidocSignatureSpan">pty.js.pty_win.</span>spawn
+            <span class="apidocSignatureSpan">(file, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.pty_win.super_">
+            function <span class="apidocSignatureSpan">pty.js.pty_win.</span>super_
+            <span class="apidocSignatureSpan">(file, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">pty.js.pty_win.</span>total</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pty.js.pty_win.</span>native</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pty.js.pty_win.prototype">module pty.js.pty_win.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.pty_win.prototype.destroy">
+            function <span class="apidocSignatureSpan">pty.js.pty_win.prototype.</span>destroy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.pty_win.prototype.kill">
+            function <span class="apidocSignatureSpan">pty.js.pty_win.prototype.</span>kill
+            <span class="apidocSignatureSpan">(sig)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.pty_win.prototype.resize">
+            function <span class="apidocSignatureSpan">pty.js.pty_win.prototype.</span>resize
+            <span class="apidocSignatureSpan">(cols, rows)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.pty_win.prototype.write">
+            function <span class="apidocSignatureSpan">pty.js.pty_win.prototype.</span>write
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">undefined <span class="apidocSignatureSpan">pty.js.pty_win.prototype.</span>process</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pty.js.toString">module pty.js.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pty.js.toString.toString">
+            function <span class="apidocSignatureSpan">pty.js.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pty.js" id="apidoc.module.pty.js">module pty.js</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.js" id="apidoc.element.pty.js.js">
+        function <span class="apidocSignatureSpan">pty.</span>js
+        <span class="apidocSignatureSpan">(file, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Terminal(file, args, opt) {
+  if (!(this instanceof Terminal)) {
+    return new Terminal(file, args, opt);
+  }
+
+  var self = this
+    , env
+    , cwd
+    , name
+    , cols
+    , rows
+    , uid
+    , gid
+    , term;
+
+  // backward compatibility
+  if (typeof args === 'string') {
+    opt = {
+      name: arguments[1],
+      cols: arguments[2],
+      rows: arguments[3],
+      cwd: process.env.HOME
+    };
+    args = [];
+  }
+
+  // for 'close'
+  this._internalee = new EventEmitter;
+
+  // arguments
+  args = args || [];
+  file = file || 'sh';
+  opt = opt || {};
+
+  cols = opt.cols || 80;
+  rows = opt.rows || 24;
+
+  uid = opt.uid != null ? opt.uid : -1;
+  gid = opt.gid != null ? opt.gid : -1;
+
+  opt.env = opt.env || process.env;
+  env = extend({}, opt.env);
+
+  if (opt.env === process.env) {
+    // Make sure we didn't start our
+    // server from inside tmux.
+    delete env.TMUX;
+    delete env.TMUX_PANE;
+
+    // Make sure we didn't start
+    // our server from inside screen.
+    // http://web.mit.edu/gnu/doc/html/screen_20.html
+    delete env.STY;
+    delete env.WINDOW;
+
+    // Delete some variables that
+    // might confuse our terminal.
+    delete env.WINDOWID;
+    delete env.TERMCAP;
+    delete env.COLUMNS;
+    delete env.LINES;
+  }
+
+  // Could set some basic env vars
+  // here, if they do not exist:
+  // USER, SHELL, HOME, LOGNAME, WINDOWID
+
+  cwd = opt.cwd || process.cwd();
+  name = opt.name || env.TERM || 'xterm';
+  env.TERM = name;
+  // XXX Shouldn't be necessary:
+  // env.LINES = rows + '';
+  // env.COLUMNS = cols + '';
+
+  env = environ(env);
+
+  function onexit(code, signal) {
+    // XXX Sometimes a data event is emitted
+    // after exit. Wait til socket is destroyed.
+    if (!self._emittedClose) {
+      if (self._boundClose) return;
+      self._boundClose = true;
+      self.once('close', function() {
+        self.emit('exit', code, signal);
+      });
+      return;
+    }
+    self.emit('exit', code, signal);
+  }
+
+  // fork
+  term = pty.fork(file, args, env, cwd, cols, rows, uid, gid, onexit);
+
+  this.socket = TTYStream(term.fd);
+  this.socket.setEncoding('utf8');
+
+  if (opt.resume !== false) {
+    this.socket.resume();
+  }
+
+  // setup
+  this.socket.on('error', function(err) {
+    // NOTE: fs.ReadStream gets EAGAIN twice at first:
+    if (err.code) {
+      if (~err.code.indexOf('EAGAIN')) return;
+    }
+
+    // close
+    self._close();
+    // EIO on exit from fs.ReadStream:
+    if (!self._emittedClose) {
+      self._emittedClose = true;
+      Terminal.total--;
+      self.emit('close');
+    }
+
+    // EIO, happens when someone closes our child
+    // process: the only process in the terminal.
+    // node &lt; 0.6.14: errno 5
+    // node &gt;= 0.6.14: read EIO
+    if (err.code) {
+      if (~err.code.indexOf('errno 5')
+          || ~err.code.indexOf('EIO')) return;
+    }
+
+    // throw anything else
+    if (self.listeners('error').length &lt; 2) {
+      throw err;
+    }
+  });
+
+  this.pid = term.pid;
+  this.fd = term.fd;
+  this.pty = term.pty;
+
+  this.file = file;
+  this.name = name;
+  this.cols = cols;
+  this.rows = rows;
+
+  this.readable = true;
+  this.writable = true;
+
+  Terminal.total++;
+
+  this.socket.on('close', function() {
+    if (self._emittedClose) return;
+    self._emittedClose = true;
+    Terminal.total--;
+    self._close();
+    self.emit('close');
+  });
+
+  env = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.Terminal" id="apidoc.element.pty.js.Terminal">
+        function <span class="apidocSignatureSpan">pty.js.</span>Terminal
+        <span class="apidocSignatureSpan">(file, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Terminal(file, args, opt) {
+  if (!(this instanceof Terminal)) {
+    return new Terminal(file, args, opt);
+  }
+
+  var self = this
+    , env
+    , cwd
+    , name
+    , cols
+    , rows
+    , uid
+    , gid
+    , term;
+
+  // backward compatibility
+  if (typeof args === 'string') {
+    opt = {
+      name: arguments[1],
+      cols: arguments[2],
+      rows: arguments[3],
+      cwd: process.env.HOME
+    };
+    args = [];
+  }
+
+  // for 'close'
+  this._internalee = new EventEmitter;
+
+  // arguments
+  args = args || [];
+  file = file || 'sh';
+  opt = opt || {};
+
+  cols = opt.cols || 80;
+  rows = opt.rows || 24;
+
+  uid = opt.uid != null ? opt.uid : -1;
+  gid = opt.gid != null ? opt.gid : -1;
+
+  opt.env = opt.env || process.env;
+  env = extend({}, opt.env);
+
+  if (opt.env === process.env) {
+    // Make sure we didn't start our
+    // server from inside tmux.
+    delete env.TMUX;
+    delete env.TMUX_PANE;
+
+    // Make sure we didn't start
+    // our server from inside screen.
+    // http://web.mit.edu/gnu/doc/html/screen_20.html
+    delete env.STY;
+    delete env.WINDOW;
+
+    // Delete some variables that
+    // might confuse our terminal.
+    delete env.WINDOWID;
+    delete env.TERMCAP;
+    delete env.COLUMNS;
+    delete env.LINES;
+  }
+
+  // Could set some basic env vars
+  // here, if they do not exist:
+  // USER, SHELL, HOME, LOGNAME, WINDOWID
+
+  cwd = opt.cwd || process.cwd();
+  name = opt.name || env.TERM || 'xterm';
+  env.TERM = name;
+  // XXX Shouldn't be necessary:
+  // env.LINES = rows + '';
+  // env.COLUMNS = cols + '';
+
+  env = environ(env);
+
+  function onexit(code, signal) {
+    // XXX Sometimes a data event is emitted
+    // after exit. Wait til socket is destroyed.
+    if (!self._emittedClose) {
+      if (self._boundClose) return;
+      self._boundClose = true;
+      self.once('close', function() {
+        self.emit('exit', code, signal);
+      });
+      return;
+    }
+    self.emit('exit', code, signal);
+  }
+
+  // fork
+  term = pty.fork(file, args, env, cwd, cols, rows, uid, gid, onexit);
+
+  this.socket = TTYStream(term.fd);
+  this.socket.setEncoding('utf8');
+
+  if (opt.resume !== false) {
+    this.socket.resume();
+  }
+
+  // setup
+  this.socket.on('error', function(err) {
+    // NOTE: fs.ReadStream gets EAGAIN twice at first:
+    if (err.code) {
+      if (~err.code.indexOf('EAGAIN')) return;
+    }
+
+    // close
+    self._close();
+    // EIO on exit from fs.ReadStream:
+    if (!self._emittedClose) {
+      self._emittedClose = true;
+      Terminal.total--;
+      self.emit('close');
+    }
+
+    // EIO, happens when someone closes our child
+    // process: the only process in the terminal.
+    // node &lt; 0.6.14: errno 5
+    // node &gt;= 0.6.14: read EIO
+    if (err.code) {
+      if (~err.code.indexOf('errno 5')
+          || ~err.code.indexOf('EIO')) return;
+    }
+
+    // throw anything else
+    if (self.listeners('error').length &lt; 2) {
+      throw err;
+    }
+  });
+
+  this.pid = term.pid;
+  this.fd = term.fd;
+  this.pty = term.pty;
+
+  this.file = file;
+  this.name = name;
+  this.cols = cols;
+  this.rows = rows;
+
+  this.readable = true;
+  this.writable = true;
+
+  Terminal.total++;
+
+  this.socket.on('close', function() {
+    if (self._emittedClose) return;
+    self._emittedClose = true;
+    Terminal.total--;
+    self._close();
+    self.emit('close');
+  });
+
+  env = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.createTerminal" id="apidoc.element.pty.js.createTerminal">
+        function <span class="apidocSignatureSpan">pty.js.</span>createTerminal
+        <span class="apidocSignatureSpan">(file, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createTerminal = function (file, args, opt) {
+  return new Terminal(file, args, opt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.fork" id="apidoc.element.pty.js.fork">
+        function <span class="apidocSignatureSpan">pty.js.</span>fork
+        <span class="apidocSignatureSpan">(file, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fork = function (file, args, opt) {
+  return new Terminal(file, args, opt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Terminal
+ */
+
+/*
+var pty = require('./');
+
+var term = pty.<span class="apidocCodeKeywordSpan">fork</span>('cmd.exe', [], {
+  name: 'Windows Shell',
+  cols: 80,
+  rows: 30,
+  cwd: process.env.HOME,
+  env: process.env,
+  debug: true
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.js.createTerminal" id="apidoc.element.pty.js.js.createTerminal">
+        function <span class="apidocSignatureSpan">pty.js.</span>js.createTerminal
+        <span class="apidocSignatureSpan">(file, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">js.createTerminal = function (file, args, opt) {
+  return new Terminal(file, args, opt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.js.native.fork" id="apidoc.element.pty.js.js.native.fork">
+        function <span class="apidocSignatureSpan">pty.js.</span>js.native.fork
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">js.native.fork = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.js.native.open" id="apidoc.element.pty.js.js.native.open">
+        function <span class="apidocSignatureSpan">pty.js.</span>js.native.open
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">js.native.open = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.js.native.process" id="apidoc.element.pty.js.js.native.process">
+        function <span class="apidocSignatureSpan">pty.js.</span>js.native.process
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">js.native.process = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.js.native.resize" id="apidoc.element.pty.js.js.native.resize">
+        function <span class="apidocSignatureSpan">pty.js.</span>js.native.resize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">js.native.resize = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.js.open" id="apidoc.element.pty.js.js.open">
+        function <span class="apidocSignatureSpan">pty.js.</span>js.open
+        <span class="apidocSignatureSpan">(opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">js.open = function (opt) {
+  var self = Object.create(Terminal.prototype)
+    , opt = opt || {};
+
+  if (arguments.length &gt; 1) {
+    opt = {
+      cols: arguments[1],
+      rows: arguments[2]
+    };
+  }
+
+  var cols = opt.cols || 80
+    , rows = opt.rows || 24
+    , term;
+
+  // open
+  term = pty.open(cols, rows);
+
+  self.master = TTYStream(term.master);
+  self.master.setEncoding('utf8');
+  self.master.resume();
+
+  self.slave = TTYStream(term.slave);
+  self.slave.setEncoding('utf8');
+  self.slave.resume();
+
+  self.socket = self.master;
+  self.pid = null;
+  self.fd = term.master;
+  self.pty = term.pty;
+
+  self.file = process.argv[0] || 'node';
+  self.name = process.env.TERM || '';
+  self.cols = cols;
+  self.rows = rows;
+
+  self.readable = true;
+  self.writable = true;
+
+  self.socket.on('error', function(err) {
+    Terminal.total--;
+    self._close();
+    if (self.listeners('error').length &lt; 2) {
+      throw err;
+    }
+  });
+
+  Terminal.total++;
+  self.socket.on('close', function() {
+    Terminal.total--;
+    self._close();
+  });
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.js.pty_win" id="apidoc.element.pty.js.js.pty_win">
+        function <span class="apidocSignatureSpan">pty.js.</span>js.pty_win
+        <span class="apidocSignatureSpan">(file, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Terminal(file, args, opt) {
+
+  var self = this,
+      env, cwd, name, cols, rows, term, agent, debug;
+
+  // Backward compatibility.
+  if (typeof args === 'string') {
+    opt = {
+      name: arguments[1],
+      cols: arguments[2],
+      rows: arguments[3],
+      cwd: process.env.HOME
+    };
+    args = [];
+  }
+
+  // Arguments.
+  args = args || [];
+  file = file || 'cmd.exe';
+  opt = opt || {};
+
+  env = extend({}, opt.env);
+
+  cols = opt.cols || 80;
+  rows = opt.rows || 30;
+  cwd = opt.cwd || process.cwd();
+  name = opt.name || env.TERM || 'Windows Shell';
+  debug = opt.debug || false;
+
+  env.TERM = name;
+
+  // Initialize environment variables.
+  env = environ(env);
+
+  // If the terminal is ready
+  this.isReady = false;
+
+  // Functions that need to run after `ready` event is emitted.
+  this.deferreds = [];
+
+  // Create new termal.
+  this.agent = new Agent(file, args, env, cwd, cols, rows, debug);
+
+  // The dummy socket is used so that we can defer everything
+  // until its available.
+  this.socket = this.agent.ptySocket;
+
+  // The terminal socket when its available
+  this.dataPipe = null;
+
+  // Not available until `ready` event emitted.
+  this.pid = this.agent.pid;
+  this.fd = this.agent.fd;
+  this.pty = this.agent.pty;
+
+  // The forked windows terminal is not available
+  // until `ready` event is emitted.
+  this.socket.on('ready_datapipe', function (socket) {
+
+    // Set terminal socket
+    self.dataPipe = socket;
+
+    // These events needs to be forwarded.
+    ['connect', 'data', 'end', 'timeout', 'drain'].forEach(function(event) {
+      self.dataPipe.on(event, function(data) {
+
+        // Wait until the first data event is fired
+        // then we can run deferreds.
+        if(!self.isReady &amp;&amp; event == 'data') {
+
+          // Terminal is now ready and we can
+          // avoid having to defer method calls.
+          self.isReady = true;
+
+          // Execute all deferred methods
+          self.deferreds.forEach(function(fn) {
+            // NB! In order to ensure that `this` has all
+            // its references updated any variable that
+            // need to be available in `this` before
+            // the deferred is run has to be declared
+            // above this forEach statement.
+            fn.run();
+          });
+
+          // Reset
+          self.deferreds = [];
+
+        }
+
+        // Emit to dummy socket
+        self.socket.emit(event, data);
+
+      });
+    });
+
+    // Resume socket.
+    self.dataPipe.resume();
+
+    // Shutdown if `error` event is emitted.
+    self.dataPipe.on('error', function (err) {
+
+      // Close terminal session.
+      self._close();
+
+      // EIO, happens when someone closes our child
+      // process: the only process in the terminal.
+      // node &lt; 0.6.14: errno 5
+      // node &gt;= 0.6.14: read EIO
+      if (err.code) {
+        if (~err.code.indexOf('errno 5') || ~err.code.indexOf('EIO')) return;
+      }
+
+      // Throw anything else.
+      if (self.listeners('error').length &lt; 2) {
+        throw err;
+      }
+
+    });
+
+    // Cleanup after the socket is closed.
+    self.dataPipe.on('close', function () {
+      Terminal.total--;
+      self.emit('exit', null);
+      self._close();
+    });
+
+  });
+
+  this.file = file;
+  this.name = name;
+  this.cols = cols;
+  this.rows = rows;
+
+  this.readable = true;
+  this.writable = true;
+
+  Terminal.total++;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.js.toString" id="apidoc.element.pty.js.js.toString">
+        function <span class="apidocSignatureSpan">pty.js.</span>js.toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">js.toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.open" id="apidoc.element.pty.js.open">
+        function <span class="apidocSignatureSpan">pty.js.</span>open
+        <span class="apidocSignatureSpan">(opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function (opt) {
+  var self = Object.create(Terminal.prototype)
+    , opt = opt || {};
+
+  if (arguments.length &gt; 1) {
+    opt = {
+      cols: arguments[1],
+      rows: arguments[2]
+    };
+  }
+
+  var cols = opt.cols || 80
+    , rows = opt.rows || 24
+    , term;
+
+  // open
+  term = pty.open(cols, rows);
+
+  self.master = TTYStream(term.master);
+  self.master.setEncoding('utf8');
+  self.master.resume();
+
+  self.slave = TTYStream(term.slave);
+  self.slave.setEncoding('utf8');
+  self.slave.resume();
+
+  self.socket = self.master;
+  self.pid = null;
+  self.fd = term.master;
+  self.pty = term.pty;
+
+  self.file = process.argv[0] || 'node';
+  self.name = process.env.TERM || '';
+  self.cols = cols;
+  self.rows = rows;
+
+  self.readable = true;
+  self.writable = true;
+
+  self.socket.on('error', function(err) {
+    Terminal.total--;
+    self._close();
+    if (self.listeners('error').length &lt; 2) {
+      throw err;
+    }
+  });
+
+  Terminal.total++;
+  self.socket.on('close', function() {
+    Terminal.total--;
+    self._close();
+  });
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  // Emit ready event.
+  self.ptySocket.emit('ready_datapipe', socket);
+
+}).listen(this.dataPipe);
+
+// Open pty session.
+var term = pty.<span class="apidocCodeKeywordSpan">open</span>(self.dataPipe, cols, rows, debug);
+
+// Terminal pid.
+this.pid = term.pid;
+
+// Not available on windows.
+this.fd = term.fd;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.spawn" id="apidoc.element.pty.js.spawn">
+        function <span class="apidocSignatureSpan">pty.js.</span>spawn
+        <span class="apidocSignatureSpan">(file, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spawn = function (file, args, opt) {
+  return new Terminal(file, args, opt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  you need a program to send you control sequences.
+
+## Example Usage
+
+``` js
+var pty = require('pty.js');
+
+var term = pty.<span class="apidocCodeKeywordSpan">spawn</span>('bash', [], {
+  name: 'xterm-color',
+  cols: 80,
+  rows: 30,
+  cwd: process.env.HOME,
+  env: process.env
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.toString" id="apidoc.element.pty.js.toString">
+        function <span class="apidocSignatureSpan">pty.js.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pty.js.createTerminal" id="apidoc.module.pty.js.createTerminal">module pty.js.createTerminal</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.createTerminal.createTerminal" id="apidoc.element.pty.js.createTerminal.createTerminal">
+        function <span class="apidocSignatureSpan">pty.js.</span>createTerminal
+        <span class="apidocSignatureSpan">(file, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createTerminal = function (file, args, opt) {
+  return new Terminal(file, args, opt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pty.js.native" id="apidoc.module.pty.js.native">module pty.js.native</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.native.fork" id="apidoc.element.pty.js.native.fork">
+        function <span class="apidocSignatureSpan">pty.js.native.</span>fork
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fork = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Terminal
+ */
+
+/*
+var pty = require('./');
+
+var term = pty.<span class="apidocCodeKeywordSpan">fork</span>('cmd.exe', [], {
+  name: 'Windows Shell',
+  cols: 80,
+  rows: 30,
+  cwd: process.env.HOME,
+  env: process.env,
+  debug: true
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.native.open" id="apidoc.element.pty.js.native.open">
+        function <span class="apidocSignatureSpan">pty.js.native.</span>open
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  // Emit ready event.
+  self.ptySocket.emit('ready_datapipe', socket);
+
+}).listen(this.dataPipe);
+
+// Open pty session.
+var term = pty.<span class="apidocCodeKeywordSpan">open</span>(self.dataPipe, cols, rows, debug);
+
+// Terminal pid.
+this.pid = term.pid;
+
+// Not available on windows.
+this.fd = term.fd;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.native.process" id="apidoc.element.pty.js.native.process">
+        function <span class="apidocSignatureSpan">pty.js.native.</span>process
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">process = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.native.resize" id="apidoc.element.pty.js.native.resize">
+        function <span class="apidocSignatureSpan">pty.js.native.</span>resize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resize = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+term.on('data', function(data) {
+  console.log(data);
+});
+
+term.write('ls\r');
+term.<span class="apidocCodeKeywordSpan">resize</span>(100, 40);
+term.write('ls /\r');
+
+console.log(term.process);
+```
+
+## Todo
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pty.js.native.fork" id="apidoc.module.pty.js.native.fork">module pty.js.native.fork</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.native.fork.fork" id="apidoc.element.pty.js.native.fork.fork">
+        function <span class="apidocSignatureSpan">pty.js.native.</span>fork
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fork = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Terminal
+ */
+
+/*
+var pty = require('./');
+
+var term = pty.<span class="apidocCodeKeywordSpan">fork</span>('cmd.exe', [], {
+  name: 'Windows Shell',
+  cols: 80,
+  rows: 30,
+  cwd: process.env.HOME,
+  env: process.env,
+  debug: true
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pty.js.native.open" id="apidoc.module.pty.js.native.open">module pty.js.native.open</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.native.open.open" id="apidoc.element.pty.js.native.open.open">
+        function <span class="apidocSignatureSpan">pty.js.native.</span>open
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  // Emit ready event.
+  self.ptySocket.emit('ready_datapipe', socket);
+
+}).listen(this.dataPipe);
+
+// Open pty session.
+var term = pty.<span class="apidocCodeKeywordSpan">open</span>(self.dataPipe, cols, rows, debug);
+
+// Terminal pid.
+this.pid = term.pid;
+
+// Not available on windows.
+this.fd = term.fd;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pty.js.native.process" id="apidoc.module.pty.js.native.process">module pty.js.native.process</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.native.process.process" id="apidoc.element.pty.js.native.process.process">
+        function <span class="apidocSignatureSpan">pty.js.native.</span>process
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">process = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pty.js.native.resize" id="apidoc.module.pty.js.native.resize">module pty.js.native.resize</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.native.resize.resize" id="apidoc.element.pty.js.native.resize.resize">
+        function <span class="apidocSignatureSpan">pty.js.native.</span>resize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resize = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+term.on('data', function(data) {
+  console.log(data);
+});
+
+term.write('ls\r');
+term.<span class="apidocCodeKeywordSpan">resize</span>(100, 40);
+term.write('ls /\r');
+
+console.log(term.process);
+```
+
+## Todo
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pty.js.open" id="apidoc.module.pty.js.open">module pty.js.open</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.open.open" id="apidoc.element.pty.js.open.open">
+        function <span class="apidocSignatureSpan">pty.js.</span>open
+        <span class="apidocSignatureSpan">(opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function (opt) {
+  var self = Object.create(Terminal.prototype)
+    , opt = opt || {};
+
+  if (arguments.length &gt; 1) {
+    opt = {
+      cols: arguments[1],
+      rows: arguments[2]
+    };
+  }
+
+  var cols = opt.cols || 80
+    , rows = opt.rows || 24
+    , term;
+
+  // open
+  term = pty.open(cols, rows);
+
+  self.master = TTYStream(term.master);
+  self.master.setEncoding('utf8');
+  self.master.resume();
+
+  self.slave = TTYStream(term.slave);
+  self.slave.setEncoding('utf8');
+  self.slave.resume();
+
+  self.socket = self.master;
+  self.pid = null;
+  self.fd = term.master;
+  self.pty = term.pty;
+
+  self.file = process.argv[0] || 'node';
+  self.name = process.env.TERM || '';
+  self.cols = cols;
+  self.rows = rows;
+
+  self.readable = true;
+  self.writable = true;
+
+  self.socket.on('error', function(err) {
+    Terminal.total--;
+    self._close();
+    if (self.listeners('error').length &lt; 2) {
+      throw err;
+    }
+  });
+
+  Terminal.total++;
+  self.socket.on('close', function() {
+    Terminal.total--;
+    self._close();
+  });
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  // Emit ready event.
+  self.ptySocket.emit('ready_datapipe', socket);
+
+}).listen(this.dataPipe);
+
+// Open pty session.
+var term = pty.<span class="apidocCodeKeywordSpan">open</span>(self.dataPipe, cols, rows, debug);
+
+// Terminal pid.
+this.pid = term.pid;
+
+// Not available on windows.
+this.fd = term.fd;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pty.js.pty_win" id="apidoc.module.pty.js.pty_win">module pty.js.pty_win</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.pty_win.pty_win" id="apidoc.element.pty.js.pty_win.pty_win">
+        function <span class="apidocSignatureSpan">pty.js.</span>pty_win
+        <span class="apidocSignatureSpan">(file, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Terminal(file, args, opt) {
+
+  var self = this,
+      env, cwd, name, cols, rows, term, agent, debug;
+
+  // Backward compatibility.
+  if (typeof args === 'string') {
+    opt = {
+      name: arguments[1],
+      cols: arguments[2],
+      rows: arguments[3],
+      cwd: process.env.HOME
+    };
+    args = [];
+  }
+
+  // Arguments.
+  args = args || [];
+  file = file || 'cmd.exe';
+  opt = opt || {};
+
+  env = extend({}, opt.env);
+
+  cols = opt.cols || 80;
+  rows = opt.rows || 30;
+  cwd = opt.cwd || process.cwd();
+  name = opt.name || env.TERM || 'Windows Shell';
+  debug = opt.debug || false;
+
+  env.TERM = name;
+
+  // Initialize environment variables.
+  env = environ(env);
+
+  // If the terminal is ready
+  this.isReady = false;
+
+  // Functions that need to run after `ready` event is emitted.
+  this.deferreds = [];
+
+  // Create new termal.
+  this.agent = new Agent(file, args, env, cwd, cols, rows, debug);
+
+  // The dummy socket is used so that we can defer everything
+  // until its available.
+  this.socket = this.agent.ptySocket;
+
+  // The terminal socket when its available
+  this.dataPipe = null;
+
+  // Not available until `ready` event emitted.
+  this.pid = this.agent.pid;
+  this.fd = this.agent.fd;
+  this.pty = this.agent.pty;
+
+  // The forked windows terminal is not available
+  // until `ready` event is emitted.
+  this.socket.on('ready_datapipe', function (socket) {
+
+    // Set terminal socket
+    self.dataPipe = socket;
+
+    // These events needs to be forwarded.
+    ['connect', 'data', 'end', 'timeout', 'drain'].forEach(function(event) {
+      self.dataPipe.on(event, function(data) {
+
+        // Wait until the first data event is fired
+        // then we can run deferreds.
+        if(!self.isReady &amp;&amp; event == 'data') {
+
+          // Terminal is now ready and we can
+          // avoid having to defer method calls.
+          self.isReady = true;
+
+          // Execute all deferred methods
+          self.deferreds.forEach(function(fn) {
+            // NB! In order to ensure that `this` has all
+            // its references updated any variable that
+            // need to be available in `this` before
+            // the deferred is run has to be declared
+            // above this forEach statement.
+            fn.run();
+          });
+
+          // Reset
+          self.deferreds = [];
+
+        }
+
+        // Emit to dummy socket
+        self.socket.emit(event, data);
+
+      });
+    });
+
+    // Resume socket.
+    self.dataPipe.resume();
+
+    // Shutdown if `error` event is emitted.
+    self.dataPipe.on('error', function (err) {
+
+      // Close terminal session.
+      self._close();
+
+      // EIO, happens when someone closes our child
+      // process: the only process in the terminal.
+      // node &lt; 0.6.14: errno 5
+      // node &gt;= 0.6.14: read EIO
+      if (err.code) {
+        if (~err.code.indexOf('errno 5') || ~err.code.indexOf('EIO')) return;
+      }
+
+      // Throw anything else.
+      if (self.listeners('error').length &lt; 2) {
+        throw err;
+      }
+
+    });
+
+    // Cleanup after the socket is closed.
+    self.dataPipe.on('close', function () {
+      Terminal.total--;
+      self.emit('exit', null);
+      self._close();
+    });
+
+  });
+
+  this.file = file;
+  this.name = name;
+  this.cols = cols;
+  this.rows = rows;
+
+  this.readable = true;
+  this.writable = true;
+
+  Terminal.total++;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.pty_win.Terminal" id="apidoc.element.pty.js.pty_win.Terminal">
+        function <span class="apidocSignatureSpan">pty.js.pty_win.</span>Terminal
+        <span class="apidocSignatureSpan">(file, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Terminal(file, args, opt) {
+
+  var self = this,
+      env, cwd, name, cols, rows, term, agent, debug;
+
+  // Backward compatibility.
+  if (typeof args === 'string') {
+    opt = {
+      name: arguments[1],
+      cols: arguments[2],
+      rows: arguments[3],
+      cwd: process.env.HOME
+    };
+    args = [];
+  }
+
+  // Arguments.
+  args = args || [];
+  file = file || 'cmd.exe';
+  opt = opt || {};
+
+  env = extend({}, opt.env);
+
+  cols = opt.cols || 80;
+  rows = opt.rows || 30;
+  cwd = opt.cwd || process.cwd();
+  name = opt.name || env.TERM || 'Windows Shell';
+  debug = opt.debug || false;
+
+  env.TERM = name;
+
+  // Initialize environment variables.
+  env = environ(env);
+
+  // If the terminal is ready
+  this.isReady = false;
+
+  // Functions that need to run after `ready` event is emitted.
+  this.deferreds = [];
+
+  // Create new termal.
+  this.agent = new Agent(file, args, env, cwd, cols, rows, debug);
+
+  // The dummy socket is used so that we can defer everything
+  // until its available.
+  this.socket = this.agent.ptySocket;
+
+  // The terminal socket when its available
+  this.dataPipe = null;
+
+  // Not available until `ready` event emitted.
+  this.pid = this.agent.pid;
+  this.fd = this.agent.fd;
+  this.pty = this.agent.pty;
+
+  // The forked windows terminal is not available
+  // until `ready` event is emitted.
+  this.socket.on('ready_datapipe', function (socket) {
+
+    // Set terminal socket
+    self.dataPipe = socket;
+
+    // These events needs to be forwarded.
+    ['connect', 'data', 'end', 'timeout', 'drain'].forEach(function(event) {
+      self.dataPipe.on(event, function(data) {
+
+        // Wait until the first data event is fired
+        // then we can run deferreds.
+        if(!self.isReady &amp;&amp; event == 'data') {
+
+          // Terminal is now ready and we can
+          // avoid having to defer method calls.
+          self.isReady = true;
+
+          // Execute all deferred methods
+          self.deferreds.forEach(function(fn) {
+            // NB! In order to ensure that `this` has all
+            // its references updated any variable that
+            // need to be available in `this` before
+            // the deferred is run has to be declared
+            // above this forEach statement.
+            fn.run();
+          });
+
+          // Reset
+          self.deferreds = [];
+
+        }
+
+        // Emit to dummy socket
+        self.socket.emit(event, data);
+
+      });
+    });
+
+    // Resume socket.
+    self.dataPipe.resume();
+
+    // Shutdown if `error` event is emitted.
+    self.dataPipe.on('error', function (err) {
+
+      // Close terminal session.
+      self._close();
+
+      // EIO, happens when someone closes our child
+      // process: the only process in the terminal.
+      // node &lt; 0.6.14: errno 5
+      // node &gt;= 0.6.14: read EIO
+      if (err.code) {
+        if (~err.code.indexOf('errno 5') || ~err.code.indexOf('EIO')) return;
+      }
+
+      // Throw anything else.
+      if (self.listeners('error').length &lt; 2) {
+        throw err;
+      }
+
+    });
+
+    // Cleanup after the socket is closed.
+    self.dataPipe.on('close', function () {
+      Terminal.total--;
+      self.emit('exit', null);
+      self._close();
+    });
+
+  });
+
+  this.file = file;
+  this.name = name;
+  this.cols = cols;
+  this.rows = rows;
+
+  this.readable = true;
+  this.writable = true;
+
+  Terminal.total++;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.pty_win.createTerminal" id="apidoc.element.pty.js.pty_win.createTerminal">
+        function <span class="apidocSignatureSpan">pty.js.pty_win.</span>createTerminal
+        <span class="apidocSignatureSpan">(file, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createTerminal = function (file, args, opt) {
+  return new Terminal(file, args, opt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.pty_win.fork" id="apidoc.element.pty.js.pty_win.fork">
+        function <span class="apidocSignatureSpan">pty.js.pty_win.</span>fork
+        <span class="apidocSignatureSpan">(file, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fork = function (file, args, opt) {
+  return new Terminal(file, args, opt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Terminal
+ */
+
+/*
+var pty = require('./');
+
+var term = pty.<span class="apidocCodeKeywordSpan">fork</span>('cmd.exe', [], {
+  name: 'Windows Shell',
+  cols: 80,
+  rows: 30,
+  cwd: process.env.HOME,
+  env: process.env,
+  debug: true
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.pty_win.open" id="apidoc.element.pty.js.pty_win.open">
+        function <span class="apidocSignatureSpan">pty.js.pty_win.</span>open
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function () {
+  throw new Error("open() not supported on windows, use Fork() instead.");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  // Emit ready event.
+  self.ptySocket.emit('ready_datapipe', socket);
+
+}).listen(this.dataPipe);
+
+// Open pty session.
+var term = pty.<span class="apidocCodeKeywordSpan">open</span>(self.dataPipe, cols, rows, debug);
+
+// Terminal pid.
+this.pid = term.pid;
+
+// Not available on windows.
+this.fd = term.fd;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.pty_win.spawn" id="apidoc.element.pty.js.pty_win.spawn">
+        function <span class="apidocSignatureSpan">pty.js.pty_win.</span>spawn
+        <span class="apidocSignatureSpan">(file, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spawn = function (file, args, opt) {
+  return new Terminal(file, args, opt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  you need a program to send you control sequences.
+
+## Example Usage
+
+``` js
+var pty = require('pty.js');
+
+var term = pty.<span class="apidocCodeKeywordSpan">spawn</span>('bash', [], {
+  name: 'xterm-color',
+  cols: 80,
+  rows: 30,
+  cwd: process.env.HOME,
+  env: process.env
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.pty_win.super_" id="apidoc.element.pty.js.pty_win.super_">
+        function <span class="apidocSignatureSpan">pty.js.pty_win.</span>super_
+        <span class="apidocSignatureSpan">(file, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Terminal(file, args, opt) {
+  if (!(this instanceof Terminal)) {
+    return new Terminal(file, args, opt);
+  }
+
+  var self = this
+    , env
+    , cwd
+    , name
+    , cols
+    , rows
+    , uid
+    , gid
+    , term;
+
+  // backward compatibility
+  if (typeof args === 'string') {
+    opt = {
+      name: arguments[1],
+      cols: arguments[2],
+      rows: arguments[3],
+      cwd: process.env.HOME
+    };
+    args = [];
+  }
+
+  // for 'close'
+  this._internalee = new EventEmitter;
+
+  // arguments
+  args = args || [];
+  file = file || 'sh';
+  opt = opt || {};
+
+  cols = opt.cols || 80;
+  rows = opt.rows || 24;
+
+  uid = opt.uid != null ? opt.uid : -1;
+  gid = opt.gid != null ? opt.gid : -1;
+
+  opt.env = opt.env || process.env;
+  env = extend({}, opt.env);
+
+  if (opt.env === process.env) {
+    // Make sure we didn't start our
+    // server from inside tmux.
+    delete env.TMUX;
+    delete env.TMUX_PANE;
+
+    // Make sure we didn't start
+    // our server from inside screen.
+    // http://web.mit.edu/gnu/doc/html/screen_20.html
+    delete env.STY;
+    delete env.WINDOW;
+
+    // Delete some variables that
+    // might confuse our terminal.
+    delete env.WINDOWID;
+    delete env.TERMCAP;
+    delete env.COLUMNS;
+    delete env.LINES;
+  }
+
+  // Could set some basic env vars
+  // here, if they do not exist:
+  // USER, SHELL, HOME, LOGNAME, WINDOWID
+
+  cwd = opt.cwd || process.cwd();
+  name = opt.name || env.TERM || 'xterm';
+  env.TERM = name;
+  // XXX Shouldn't be necessary:
+  // env.LINES = rows + '';
+  // env.COLUMNS = cols + '';
+
+  env = environ(env);
+
+  function onexit(code, signal) {
+    // XXX Sometimes a data event is emitted
+    // after exit. Wait til socket is destroyed.
+    if (!self._emittedClose) {
+      if (self._boundClose) return;
+      self._boundClose = true;
+      self.once('close', function() {
+        self.emit('exit', code, signal);
+      });
+      return;
+    }
+    self.emit('exit', code, signal);
+  }
+
+  // fork
+  term = pty.fork(file, args, env, cwd, cols, rows, uid, gid, onexit);
+
+  this.socket = TTYStream(term.fd);
+  this.socket.setEncoding('utf8');
+
+  if (opt.resume !== false) {
+    this.socket.resume();
+  }
+
+  // setup
+  this.socket.on('error', function(err) {
+    // NOTE: fs.ReadStream gets EAGAIN twice at first:
+    if (err.code) {
+      if (~err.code.indexOf('EAGAIN')) return;
+    }
+
+    // close
+    self._close();
+    // EIO on exit from fs.ReadStream:
+    if (!self._emittedClose) {
+      self._emittedClose = true;
+      Terminal.total--;
+      self.emit('close');
+    }
+
+    // EIO, happens when someone closes our child
+    // process: the only process in the terminal.
+    // node &lt; 0.6.14: errno 5
+    // node &gt;= 0.6.14: read EIO
+    if (err.code) {
+      if (~err.code.indexOf('errno 5')
+          || ~err.code.indexOf('EIO')) return;
+    }
+
+    // throw anything else
+    if (self.listeners('error').length &lt; 2) {
+      throw err;
+    }
+  });
+
+  this.pid = term.pid;
+  this.fd = term.fd;
+  this.pty = term.pty;
+
+  this.file = file;
+  this.name = name;
+  this.cols = cols;
+  this.rows = rows;
+
+  this.readable = true;
+  this.writable = true;
+
+  Terminal.total++;
+
+  this.socket.on('close', function() {
+    if (self._emittedClose) return;
+    self._emittedClose = true;
+    Terminal.total--;
+    self._close();
+    self.emit('close');
+  });
+
+  env = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pty.js.pty_win.prototype" id="apidoc.module.pty.js.pty_win.prototype">module pty.js.pty_win.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.pty_win.prototype.destroy" id="apidoc.element.pty.js.pty_win.prototype.destroy">
+        function <span class="apidocSignatureSpan">pty.js.pty_win.prototype.</span>destroy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function () {
+  defer(this, function() {
+    this.kill();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.pty_win.prototype.kill" id="apidoc.element.pty.js.pty_win.prototype.kill">
+        function <span class="apidocSignatureSpan">pty.js.pty_win.prototype.</span>kill
+        <span class="apidocSignatureSpan">(sig)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">kill = function (sig) {
+  defer(this, function() {
+    if (sig !== undefined) {
+      throw new Error("Signals not supported on windows.");
+    }
+    this._close();
+    pty.kill(this.pid);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  pty.resize(this.pid, cols, rows);
+});
+};
+
+Terminal.prototype.destroy = function () {
+defer(this, function() {
+  this.<span class="apidocCodeKeywordSpan">kill</span>();
+});
+};
+
+Terminal.prototype.kill = function (sig) {
+defer(this, function() {
+  if (sig !== undefined) {
+    throw new Error("Signals not supported on windows.");
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.pty_win.prototype.resize" id="apidoc.element.pty.js.pty_win.prototype.resize">
+        function <span class="apidocSignatureSpan">pty.js.pty_win.prototype.</span>resize
+        <span class="apidocSignatureSpan">(cols, rows)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resize = function (cols, rows) {
+  defer(this, function() {
+
+    cols = cols || 80;
+    rows = rows || 24;
+
+    this.cols = cols;
+    this.rows = rows;
+
+    pty.resize(this.pid, cols, rows);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+term.on('data', function(data) {
+  console.log(data);
+});
+
+term.write('ls\r');
+term.<span class="apidocCodeKeywordSpan">resize</span>(100, 40);
+term.write('ls /\r');
+
+console.log(term.process);
+```
+
+## Todo
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.pty_win.prototype.write" id="apidoc.element.pty.js.pty_win.prototype.write">
+        function <span class="apidocSignatureSpan">pty.js.pty_win.prototype.</span>write
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (data) {
+  defer(this, function() {
+    this.dataPipe.write(data);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  env: process.env
+});
+
+term.on('data', function(data) {
+  console.log(data);
+});
+
+term.<span class="apidocCodeKeywordSpan">write</span>('ls\r');
+term.resize(100, 40);
+term.write('ls /\r');
+
+console.log(term.process);
+```
+
+## Todo
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pty.js.toString" id="apidoc.module.pty.js.toString">module pty.js.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pty.js.toString.toString" id="apidoc.element.pty.js.toString.toString">
+        function <span class="apidocSignatureSpan">pty.js.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
