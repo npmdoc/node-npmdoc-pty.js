@@ -1,4 +1,7 @@
-# api documentation for  [pty.js (v0.3.1)](https://github.com/chjj/pty.js)  [![npm package](https://img.shields.io/npm/v/npmdoc-pty.js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-pty.js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-pty.js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-pty.js)
+# npmdoc-pty.js
+
+#### basic api documentation for  [pty.js (v0.3.1)](https://github.com/chjj/pty.js)  [![npm package](https://img.shields.io/npm/v/npmdoc-pty.js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-pty.js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-pty.js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-pty.js)
+
 #### Pseudo terminals for node.
 
 [![NPM](https://nodei.co/npm/pty.js.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/pty.js)
@@ -73,7 +76,8 @@
         "tty",
         "terminal"
     ],
-    "version": "0.3.1"
+    "version": "0.3.1",
+    "bin": {}
 }
 ```
 
